@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Atendimento</title>
+</head>
+<body>
+    <header id="logo">
+        <h1>Atendimento Diário</h1>
+    </header>
+
+    <main class="container">
+        <section id="transaction">
+            <table id="data-table">
+
+                <a
+                onclick="Modal.open()"
+                href="#"
+                class="button new">+ Novo Atendimento</a>
+
+                <thead id="thead">
+                    <tr>
+                        <th>ID</th>
+                        <th>CNPJ</th>
+                        <th>Razão Social</th>
+                        <th>Nome Fantasia</th>
+                        <th>Funcionario</th>
+                        <th>Data</th>
+                        <th>Tipo de Exame</th>
+                        <th>CPF</th>
+                        <th>Cargo</th>
+                        <th>Data de Nascimento</th>
+                        <th>Risco Físico</th>
+                        <th>Risco Químico</th>
+                        <th>Risco Biológico</th>
+                        <th>Risco Ergonômico</th>
+                        <th>Risco Acidente</th>
+                        <th>Exame1</th>
+                        <th>Data do Exame1</th>
+                        <th>Exame2</th>
+                        <th>Data do Exame2</th>
+                        <th>Exame3</th>
+                        <th>Data do Exame3</th>
+                        <th>Exame4</th>
+                        <th>Data do Exame4</th>
+                        <th>Exame5</th>
+                        <th>Data do Exame5</th>
+                        <th>Exame6</th>
+                        <th>Data do Exame6</th>
+                        <th>Exame7</th>
+                        <th>Data do Exame7</th>
+                        <th>Exame8</th>
+                        <th>Data do Exame8</th>
+                        <th>Exame9</th>
+                        <th>Data do Exame9</th>
+
+                        <th>Exame10</th>
+                        <th>Data do Exame10</th>
+                        <th>Exame11</th>
+                        <th>Data do Exame11</th>
+                        <th>Exame12</th>
+                        <th>Data do Exame12</th>
+                        <th>Exame13</th>
+                        <th>Data do Exame13</th>
+                        <th>Exame14</th>
+                        <th>Data do Exame14</th>
+                        <th>Exame15</th>
+                        <th>Data do Exame15</th>
+                        <th>Exame16</th>
+                        <th>Data do Exame16</th>
+                        <th>Exame17</th>
+                        <th>Data do Exame17</th>
+                        <th>Exame18</th>
+                        <th>Data do Exame18</th>
+                        <th>Aptidao</th>
+                        <th>Médico Coordenador</th>
+                        <th>Observação</th>
+                        <th>Convenio</th>
+                        <th>Remover</th>
+                        <th>Imprimir</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-content" id="form">
+                <h2>Novo Atendimento</h2>
+                    <form action="" onsubmit="Form.submit(event)">
+                        
+                        <fieldset>
+                            <div class="input-group">
+                                <label class="sr-only" for="razaoSocial">Razao Social</label>
+                                <input
+                                 type="text"
+                                 id="razaoSocial"
+                                 name="razaoSocial"
+                                 placeholder="Razao Social">
+                            </div>
+                            
+                            <div class="empresaInfo">
+                                <div class="input-group numeroCnpj">
+                                    <label class="sr-only" for="cnpj">Numero do CNPJ</label>
+                                    <input
+                                     type="text"
+                                     id="cnpj"
+                                     name="cnpj"
+                                     placeholder="Numero do cnpj">
+                                </div>
+                                <div class="input-group nomeFantasia">
+                                    <label class="sr-only" for="nomeFantasia">Nome Fantasia</label>
+                                    <input
+                                     type="text"
+                                     id="nomeFantasia"
+                                     name="nomeFantasia"
+                                     placeholder="Nome Fantasia">
+                                </div>
+                        </fieldset>
+            </div>
+
+            <fieldset>
+                <div class="input-group">
+                    <label class="sr-only" for="funcionario">Nome do Funcionario</label>
+                    <input
+                     type="text"
+                     id="funcionario"
+                     name="funcionario"
+                     placeholder="Nome do funcionario">
+                </div>
+                
+                <div class="funcionarioInfo">
+                    <div class="input-group funcionarioImput">
+                        <label class="sr-only" for="cpf">CPF</label>
+                        <input
+                         type="text"
+                         id="cpf"
+                         name="cpf"
+                         placeholder="CPF do funcionario"
+                         size="11">
+                    </div>
+
+                    <div class="input-group funcionarioImput">
+                        <label class="sr-only" for="nascimento">Data de Nascimento</label>
+                        <input
+                         type="date"
+                         id="nascimento"
+                         name="nascimento">
+                    </div>
+
+                    <div class="input-group funcionarioImput">
+                        <label class="sr-only" for="cargo">Cargo do Funcionario</label>
+                        <input
+                         type="text"
+                         id="cargo"
+                         name="cargo"
+                         placeholder="Cargo do funcionario">
+                    </div>
+                </div>
+            </fieldset>
+
+                        <fieldset class="atendimentoInfo">
+                            <div class="input-group atendimentoImput">
+                                <label class="sr-only" for="date">Data</label>
+                                <input
+                                 type="date"
+                                 id="date"
+                                 name="date"
+                                />
+                            </div>
+    
+                            <div class="input-group atendimentoImput">
+                                <label class="sr-only" for="tipoExame">Tipo de Exame</label>
+                                <input
+                                type="text"
+                                id="tipoExame"
+                                name="tipoExame"
+                                placeholder="Tipo de Exame"
+                                list="tExame">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="riskInfo">
+                            <div class="input-group">
+                                <label class="sr-only" for="riscoFisico">Risco Físico</label>
+                                <input
+                                 type="text"
+                                 id="riscoFisico"
+                                 name="riscoFisico"
+                                 placeholder="Risco Físico">
+                            </div>
+    
+                            <div class="input-group">
+                                <label class="sr-only" for="riscoQuímico">Risco Químico</label>
+                                <input
+                                 type="text"
+                                 id="riscoQuimico"
+                                 name="riscoQuimico"
+                                 placeholder="Risco Químico">
+                            </div>
+    
+                            <div class="input-group">
+                                <label class="sr-only" for="riscoBiologico">Risco Biologico</label>
+                                <input
+                                 type="text"
+                                 id="riscoBiologico"
+                                 name="riscoBiologico"
+                                 placeholder="Risco Biológico">
+                            </div>
+    
+                            <div class="input-group">
+                                <label class="sr-only" for="riscoErgonomico">Risco Ergonômico</label>
+                                <input
+                                 type="text"
+                                 id="riscoErgonomico"
+                                 name="riscoErgonomico"
+                                 placeholder="Risco Ergonômico">
+                            </div>
+    
+                            <div class="input-group">
+                                <label class="sr-only" for="riscoAcidente">Risco Acidente</label>
+                                <input
+                                 type="text"
+                                 id="riscoAcidente"
+                                 name="riscoAcidente"
+                                 placeholder="Risco Acidente">
+                            </div>
+                        </fieldset>
+
+                        <fieldset id="examesContainer">
+
+<!--EXAMES 1-->
+
+                            <div class="tbExames1">
+                                <label class="sr-only" for="exame1">Exame1</label>
+                                <input
+                                    type="text"
+                                    id="exame1"
+                                    name="exame1"
+                                    placeholder="Exame1"
+                                    list="exames">
+                            </div>
+
+                            <div>
+                                <label class="sr-only" for="dateExame1">Data do Exame</label>
+                                <input
+                                    type="date"
+                                    id="dateExame1"
+                                    name="dateExame1">
+                            </div>
+
+                            <div class="tbExames2">
+                                <label class="sr-only" for="exame2">Exame2</label>
+                                <input
+                                    type="text"
+                                    id="exame2"
+                                    name="exame2"
+                                    placeholder="Exame2"
+                                    list="exames">
+                            </div>
+
+                            <div>
+                                <label class="sr-only" for="dateExame2">Data do Exame</label>
+                                <input
+                                    type="date"
+                                    id="dateExame2"
+                                    name="dateExame2">
+                            </div>
+                        
+                            <div class="tbExames1">    
+                                <label class="sr-only" for="exame3">Exame3</label>
+                                <input
+                                    type="text"
+                                    id="exame3"
+                                    name="exame3"
+                                    placeholder="Exame3"
+                                    list="exames">
+                            </div>
+
+                            <div>
+                                <label class="sr-only" for="dateExame3">Data do Exame</label>
+                                <input
+                                    type="date"
+                                    id="dateExame3"
+                                    name="dateExame3">
+                            </div>
+
+                            <div class="tbExames2">
+                                <label class="sr-only" for="exame4">Exame4</label>
+                                <input
+                                    type="text"
+                                    id="exame4"
+                                    name="exame4"
+                                    placeholder="Exame4"
+                                    list="exames">
+                            </div>
+
+                            <div>
+                                <label class="sr-only" for="dateExame4">Data do Exame</label>
+                                <input
+                                    type="date"
+                                    id="dateExame4"
+                                    name="dateExame4">
+                            </div>
+
+                            <div class="tbExames1">
+                                <label class="sr-only" for="exame5">Exame5</label>
+                                <input
+                                    type="text"
+                                    id="exame5"
+                                    name="exame5"
+                                    placeholder="Exame5"
+                                    list="exames">
+                            </div>
+
+                            <div>
+                                <label class="sr-only" for="dateExame5">Data do Exame</label>
+                                <input
+                                    type="date"
+                                    id="dateExame5"
+                                    name="dateExame5">
+                            </div>
+
+                            <div class="tbExames2">
+                                <label class="sr-only" for="exame6">Exame6</label>
+                                <input
+                                    type="text"
+                                    id="exame6"
+                                    name="exame6"
+                                    placeholder="Exame6"
+                                    list="exames">
+                            </div>
+
+                            <div>
+                                <label class="sr-only" for="dateExame6">Data do Exame</label>
+                                <input
+                                    type="date"
+                                    id="dateExame6"
+                                    name="dateExame6">
+                            </div>
+                        
+                            <div class="tbExames1">    
+                                <label class="sr-only" for="exame7">Exame7</label>
+                                <input
+                                    type="text"
+                                    id="exame7"
+                                    name="exame7"
+                                    placeholder="Exame7"
+                                    list="exames">
+                            </div>
+
+                            <div>
+                                <label class="sr-only" for="dateExame7">Data do Exame</label>
+                                <input
+                                    type="date"
+                                    id="dateExame7"
+                                    name="dateExame7">
+                            </div>
+
+                            <div class="tbExames2">
+                                <label class="sr-only" for="exame8">Exame8</label>
+                                <input
+                                    type="text"
+                                    id="exame8"
+                                    name="exame8"
+                                    placeholder="Exame8"
+                                    list="exames">
+                            </div>
+
+                            <div>
+                                <label class="sr-only" for="dateExame8">Data do Exame</label>
+                                <input
+                                    type="date"
+                                    id="dateExame8"
+                                    name="dateExame8">
+                            </div>
+
+                            <div class="tbExames1">
+                                <label class="sr-only" for="exame9">Exame9</label>
+                                <input
+                                    type="text"
+                                    id="exame9"
+                                    name="exame9"
+                                    placeholder="Exame9"
+                                    list="exames">
+                            </div>
+
+                            <div>
+                                <label class="sr-only" for="dateExame9">Data do Exame</label>
+                                <input
+                                    type="date"
+                                    id="dateExame9"
+                                    name="dateExame9">
+                            </div>
+
+<!--EXAMES 2-->
+
+<div class="tbExames1">
+    <label class="sr-only" for="exame10">Exame10</label>
+    <input
+        type="text"
+        id="exame10"
+        name="exame10"
+        placeholder="Exame10"
+        list="exames">
+</div>
+
+<div>
+    <label class="sr-only" for="dateExame10">Data do Exame</label>
+    <input
+        type="date"
+        id="dateExame10"
+        name="dateExame10">
+</div>
+
+<div class="tbExames2">
+    <label class="sr-only" for="exame11">Exame11</label>
+    <input
+        type="text"
+        id="exame11"
+        name="exame11"
+        placeholder="Exame11"
+        list="exames">
+</div>
+
+<div>
+    <label class="sr-only" for="dateExame11">Data do Exame</label>
+    <input
+        type="date"
+        id="dateExame11"
+        name="dateExame11">
+</div>
+
+<div class="tbExames1">    
+    <label class="sr-only" for="exame12">Exame12</label>
+    <input
+        type="text"
+        id="exame12"
+        name="exame12"
+        placeholder="Exame12"
+        list="exames">
+</div>
+
+<div>
+    <label class="sr-only" for="dateExame12">Data do Exame</label>
+    <input
+        type="date"
+        id="dateExame12"
+        name="dateExame12">
+</div>
+
+<div class="tbExames2">
+    <label class="sr-only" for="exame13">Exame13</label>
+    <input
+        type="text"
+        id="exame13"
+        name="exame13"
+        placeholder="Exame13"
+        list="exames">
+</div>
+
+<div>
+    <label class="sr-only" for="dateExame13">Data do Exame</label>
+    <input
+        type="date"
+        id="dateExame13"
+        name="dateExame13">
+</div>
+
+<div class="tbExames1">
+    <label class="sr-only" for="exame14">Exame14</label>
+    <input
+        type="text"
+        id="exame14"
+        name="exame14"
+        placeholder="Exame14"
+        list="exames">
+</div>
+
+<div>
+    <label class="sr-only" for="dateExame14">Data do Exame</label>
+    <input
+        type="date"
+        id="dateExame14"
+        name="dateExame14">
+</div>
+
+<div class="tbExames2">
+    <label class="sr-only" for="exame15">Exame15</label>
+    <input
+        type="text"
+        id="exame15"
+        name="exame15"
+        placeholder="Exame15"
+        list="exames">
+</div>
+
+<div>
+    <label class="sr-only" for="dateExame15">Data do Exame</label>
+    <input
+        type="date"
+        id="dateExame15"
+        name="dateExame15">
+</div>
+
+<div class="tbExames1">    
+    <label class="sr-only" for="exame16">Exame16</label>
+    <input
+        type="text"
+        id="exame16"
+        name="exame16"
+        placeholder="Exame16"
+        list="exames">
+</div>
+
+<div>
+    <label class="sr-only" for="dateExame16">Data do Exame</label>
+    <input
+        type="date"
+        id="dateExame16"
+        name="dateExame16">
+</div>
+
+<div class="tbExames2">
+    <label class="sr-only" for="exame17">Exame17</label>
+    <input
+        type="text"
+        id="exame17"
+        name="exame17"
+        placeholder="Exame17"
+        list="exames">
+</div>
+
+<div>
+    <label class="sr-only" for="dateExame17">Data do Exame</label>
+    <input
+        type="date"
+        id="dateExame17"
+        name="dateExame17">
+</div>
+
+<div class="tbExames1">
+    <label class="sr-only" for="exame18">Exame18</label>
+    <input
+        type="text"
+        id="exame18"
+        name="exame18"
+        placeholder="Exame18"
+        list="exames">
+</div>
+
+<div>
+    <label class="sr-only" for="dateExame18">Data do Exame</label>
+    <input
+        type="date"
+        id="dateExame18"
+        name="dateExame18">
+</div>
+                        </fieldset>
+
+
+                        <fieldset>
+                            <div class="input-group">
+                                <label class="sr-only" for="aptidao">Aptidao</label>
+                                <input
+                                 type="text"
+                                 id="aptidao"
+                                 name="aptidao"
+                                 placeholder="aptidao"
+                                 list="aptidaoSelect">
+                            </div>
+    
+                            <div class="input-group">
+                                <label class="sr-only" for="medicoCoordenador">Médico Coodenador</label>
+                                <input
+                                 type="text"
+                                 id="medicoCoordenador"
+                                 name="medicoCoordenador"
+                                 placeholder="Medico Coordenador">
+                            </div>
+    
+                            <div class="input-group">
+                                <label class="sr-only" for="observacao">Observação</label>
+                                <input
+                                 type="text"
+                                 id="observacao"
+                                 name="observacao"
+                                 placeholder="Observação">
+                            </div>
+    
+                            <div class="input-group">
+                                <label class="sr-only" for="convenio">Convênio</label>
+                                <input
+                                 type="text"
+                                 id="convenio"
+                                 name="convenio"
+                                 placeholder="Convênio">
+                            </div>
+                        </fieldset>
+
+                        <div class="input-group actions">
+                            <a
+                            onclick="Modal.close()"
+                            href="#"    
+                            class="button cancel">Cancelar</a>
+                            <button>Salvar</button>
+                        </div>
+
+
+                    </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        @Atendimentos Avulsos Diários
+    </footer>
+
+    <script src="./scripts.js">
+    </script>
+
+</body>
+</html>
+
+<datalist name="exames" id="exames">
+    <option>Exame Clinico</option>
+    <option>Acuidade Visual</option>
+    <option>Audiometria</option>
+    <option>Hemograma completo</option>
+    <option>Contagem de plaquetas</option>
+</datalist>
+
+<datalist name="tExame" id="tExame">
+    <option>Admissional</option>
+    <option>Periódico</option>
+    <option>Demissional</option>
+    <option>Retorno ao trabalho</option>
+    <option>Mudança de risco ocupacional</option>
+    <option>Consulta</option>
+</datalist>
+
+<datalist name="aptidaoSelect" id="aptidaoSelect">
+    <option>[  ] Apto para a função      [  ] Inapto para a função</option>
+    <option>[  ] Apto para a função      [  ] Inapto para a função   [  ] Apto para manipuação de Alimentos      [  ] Inapto para manipuação de Alimentos </option>
+    <option>Demissional</option>
+    <option>Retorno ao trabalho</option>
+    <option>Mudança de risco ocupacional</option>
+    <option>Consulta</option>
+</datalist>
